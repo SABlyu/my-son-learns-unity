@@ -334,6 +334,7 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/MouseLook.cs"
 "Assets/playerMovement.cs"
+"Assets/Respawn.cs"
 -langversion:9.0
 
 /deterministic

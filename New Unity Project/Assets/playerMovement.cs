@@ -13,6 +13,11 @@ public class playerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
+
+    public Transform lastSafePoint;
+
+    public Respawn respawn;
+
     Vector3 velocity;
     bool isGrounded;
 
@@ -48,6 +53,15 @@ public class playerMovement : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
+        if (lastSafePoint != null)
+        {
+            //this.GetComponent<Transform>().position = lastSafePoint.position;
+        }
+    }
 
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        lastSafePoint = collider.GetComponent<Transform>();
     }
 }
